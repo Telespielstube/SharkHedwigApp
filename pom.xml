@@ -83,7 +83,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                net.sharkhedwigapp.sharkhedwigapp/net.sharkhedwigapp.HelloApplication
+                                net.sharkhedwigapp.sharkhedwigapp/net.sharkhedwigapp.Application
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
