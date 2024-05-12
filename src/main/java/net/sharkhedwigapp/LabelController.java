@@ -3,21 +3,13 @@ package net.sharkhedwigapp;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 
-import java.util.Set;
-
-public class Controller {
+public class LabelController {
     @FXML
     private Text content_header;
     @FXML
     private LabelController labelController;
     @FXML
     private SettingsController settingsController;
-
-    public Controller() {
-        this.labelController = new LabelController();
-        this.settingsController = new SettingsController();
-    }
-
     @FXML
     protected void onShippingLabelButtonClick() {
         Main main = new Main();
@@ -31,6 +23,6 @@ public class Controller {
         content_header.setText("Settings");
 
     }
-
-
+    public void showForm() {
+    }
 }

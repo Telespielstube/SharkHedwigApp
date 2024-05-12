@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -28,7 +28,7 @@
                         <Image url="@../../img/package.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="75.0" layoutY="168.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: black;" text="Settings" />
+                  <Button fx:id="settings" layoutX="75.0" layoutY="168.0" mnemonicParsing="false" onAction="#onSettingsButtonClick" style="-fx-background-color: transparent; -fx-text-fill: black;" text="Settings" />
                   <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="24.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../img/cog.png" />
@@ -44,8 +44,17 @@
          <children>
             <AnchorPane fx:id="anchor_main_window" prefHeight="900.0" prefWidth="1183.0" styleClass="shipping_label_button" stylesheets="@style.css">
                <children>
-                  <Label fx:id="main_label" layoutX="576.0" layoutY="433.0" />
+                  <Text fx:id="content_header" layoutX="43.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Text>
                </children></AnchorPane>
+            <Text fx:id="content_header1" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
          </children>
       </HBox>
    </center>
