@@ -3,14 +3,16 @@ package net.sharkhedwigapp;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class Main extends javafx.application.Application {
-
     private static Stage stg;
+
     @Override
     public void start(Stage stage) throws IOException {
         stg = stage;
@@ -23,10 +25,8 @@ public class Main extends javafx.application.Application {
     }
 
     public void changeScene(String fxmlView) {
-        StackPane stackPane = new StackPane();
-        stackPane.
         try {
-            Parent pane = FXMLLoader.load(getClass().getResource(fxmlView));
+            Pane pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlView)));
             stg.getScene().setRoot(pane);
         } catch (IOException e) {
             throw new RuntimeException(e);

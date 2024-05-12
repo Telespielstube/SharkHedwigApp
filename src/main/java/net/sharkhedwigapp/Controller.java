@@ -12,6 +12,7 @@ public class Controller {
     private LabelController labelController;
     @FXML
     private SettingsController settingsController;
+    private Main main;
 
     public Controller() {
         this.labelController = new LabelController();
@@ -20,15 +21,15 @@ public class Controller {
 
     @FXML
     protected void onShippingLabelButtonClick() {
-        Main main = new Main();
+        this.main = new Main();
         content_header.setText("Shipping Label");
-        this.labelController.showForm();
         main.changeScene("label-view.fxml");
     }
 
     @FXML
     protected void onSettingsButtonClick() {
         content_header.setText("Settings");
+        main.changeScene("settings-view.fxml");
 
     }
 

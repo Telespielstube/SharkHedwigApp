@@ -53,12 +53,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx-commons -->
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
         <dependency>
-            <groupId>de.jensd</groupId>
-            <artifactId>fontawesomefx</artifactId>
-            <version>8.4</version>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-media</artifactId>
+            <version>22.0.1</version>
         </dependency>
     </dependencies>
 
