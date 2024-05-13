@@ -1,9 +1,8 @@
-package net.sharkhedwigapp;
+package net.sharkhedwigapp.Controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
-
-import java.util.Set;
+import net.sharkhedwigapp.Main;
 
 public class Controller {
     @FXML

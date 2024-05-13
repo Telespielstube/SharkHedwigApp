@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.sharkhedwigapp.LabelController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.sharkhedwigapp.Controller.LabelController">
     <left>
         <VBox prefHeight="900.0" prefWidth="258.0" BorderPane.alignment="CENTER">
             <children>
@@ -54,18 +54,65 @@
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <TextField fx:id="sender_field" layoutX="171.0" layoutY="234.0" />
-                  <Label fx:id="origin" layoutX="110.0" layoutY="303.0" text="Origin">
+                  <TextField fx:id="sender_field" layoutX="200.0" layoutY="237.0" />
+                  <Label fx:id="origin" layoutX="398.0" layoutY="238.0" text="Origin">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <TextField fx:id="origin_field" layoutX="171.0" layoutY="300.0" />
-                  <Button fx:id="send" layoutX="491.0" layoutY="534.0" mnemonicParsing="false" onAction="#onButtonClickSend" prefHeight="40.0" prefWidth="90.0" text="Send">
+                  <TextField fx:id="origin_field" layoutX="511.0" layoutY="237.0" />
+                  <Button fx:id="send" layoutX="571.0" layoutY="719.0" mnemonicParsing="false" onAction="#onButtonClickSend" prefHeight="40.0" prefWidth="90.0" text="Send">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
                   <Text fx:id="send_info" layoutX="524.0" layoutY="644.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Label fx:id="destination" layoutX="398.0" layoutY="439.0" text="Destination">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="recipient" layoutX="104.0" layoutY="439.0" text="Recipient">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="latitudeOrigin_field" layoutX="511.0" layoutY="290.0" />
+                  <TextField fx:id="recipient_field" layoutX="200.0" layoutY="438.0" />
+                  <Label fx:id="weight" layoutX="104.0" layoutY="628.0" text="Weight">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="longitudeOrigin_field" layoutX="511.0" layoutY="349.0" />
+                  <Label fx:id="latitudeOrigin" layoutX="398.0" layoutY="291.0" text="Latitude">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="destination_field" layoutX="511.0" layoutY="438.0" />
+                  <Label fx:id="latitudeDest" layoutX="398.0" layoutY="495.0" text="Latitude">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="latitudeDest_field" layoutX="511.0" layoutY="494.0" />
+                  <Label fx:id="longitudeDest" layoutX="398.0" layoutY="548.0" text="Longitude">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="longitudeDest_field" layoutX="511.0" layoutY="547.0" />
+                  <TextField fx:id="weight_field" layoutX="200.0" layoutY="627.0" />
+                  <Button fx:id="save" layoutX="460.0" layoutY="719.0" mnemonicParsing="false" onAction="#onButtonClickSave" prefHeight="40.0" prefWidth="90.0" text="Save">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Text fx:id="error_text" layoutX="409.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
                     </children></AnchorPane>
             </children>
         </HBox>
