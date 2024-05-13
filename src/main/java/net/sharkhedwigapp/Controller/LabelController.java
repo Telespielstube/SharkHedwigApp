@@ -48,21 +48,8 @@ public class  LabelController {
         content_header.setText("Settings");
     }
 
-    private boolean verifyData() {
-        return Stream.of(
-                sender_field,
-                origin_field,
-                latitudeOrigin_field,
-                longitudeOrigin_field,
-                recipient_field,
-                destination_field,
-                latitudeDest_field,
-                longitudeDest_field,
-                weight_field).anyMatch(Objects::nonNull);
-    }
-
     @FXML
-    protected void onButtonClickSave() {
+    protected void onSaveButtonClick() {
         if (verifyData()) {
 
         } else {
@@ -72,12 +59,19 @@ public class  LabelController {
 
     @FXML
     protected void onButtonClickSend() {
-//        if (verifyData()) {
-//         //   new HttpClient().run();
-//            send_info.setText("Sent!!");
-//        } else {
-//            error_text.setText("Some data is wrong. Check again!!");
-//        }
+        if (verifyData()) {
+         //   new HttpClient().run();
+            send_info.setText("Sent!!");
+        } else {
+            error_text.setText("Some data is wrong. Check again!!");
+        }
+    }
 
+    private boolean verifyData() {
+        return sender_field.getText().trim().isBlank() || origin_field.getText().trim().isBlank() || latitudeOrigin_field.getText().trim().isBlank()
+                || longitudeOrigin_field.getText().trim().isBlank() || recipient_field.getText().trim().isBlank() || destination_field.getText().trim().isBlank()
+                || latitudeDest_field.getText().trim().isBlank() || longitudeDest_field.getText().trim().isBlank() || weight_field.getText().trim().isBlank()
+                ? false
+                : true;
     }
 }

@@ -60,31 +60,26 @@
                         <Font size="18.0" />
                      </font></Label>
                   <TextField fx:id="origin_field" layoutX="511.0" layoutY="237.0" />
-                  <Button fx:id="send" layoutX="571.0" layoutY="719.0" mnemonicParsing="false" onAction="#onButtonClickSend" prefHeight="40.0" prefWidth="90.0" text="Send">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
                   <Text fx:id="send_info" layoutX="524.0" layoutY="644.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                   <Label fx:id="destination" layoutX="398.0" layoutY="439.0" text="Destination">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="recipient" layoutX="104.0" layoutY="439.0" text="Recipient">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
                   <TextField fx:id="latitudeOrigin_field" layoutX="511.0" layoutY="290.0" />
                   <TextField fx:id="recipient_field" layoutX="200.0" layoutY="438.0" />
-                  <Label fx:id="weight" layoutX="104.0" layoutY="628.0" text="Weight">
+                <TextField fx:id="longitudeOrigin_field" layoutX="511.0" layoutY="349.0" />
+                <Label fx:id="latitudeOrigin" layoutX="398.0" layoutY="291.0" text="Latitude">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                  <Label fx:id="latitudeOrigin" layoutX="398.0" layoutY="350.0" text="Longitude">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="longitudeOrigin_field" layoutX="511.0" layoutY="349.0" />
-                  <Label fx:id="latitudeOrigin" layoutX="398.0" layoutY="291.0" text="Latitude">
+                  <Label fx:id="recipient" layoutX="104.0" layoutY="439.0" text="Recipient">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -102,13 +97,23 @@
                      </font>
                   </Label>
                   <TextField fx:id="longitudeDest_field" layoutX="511.0" layoutY="547.0" />
+                  <Label fx:id="weight" layoutX="104.0" layoutY="628.0" text="Weight">
+                      <font>
+                          <Font size="18.0" />
+                    </font>
+                </Label>
                   <TextField fx:id="weight_field" layoutX="200.0" layoutY="627.0" />
-                  <Button fx:id="save" layoutX="460.0" layoutY="719.0" mnemonicParsing="false" onAction="#onButtonClickSave" prefHeight="40.0" prefWidth="90.0" text="Save">
+                  <Button fx:id="save" layoutX="460.0" layoutY="719.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="40.0" prefWidth="90.0" text="Save">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Text fx:id="error_text" layoutX="409.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                    <Button fx:id="send" layoutX="571.0" layoutY="719.0" mnemonicParsing="false" onAction="#onButtonClickSend" prefHeight="40.0" prefWidth="90.0" text="Send">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                  <Text fx:id="error_text" fill="RED" layoutX="181.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="496.0">
                      <font>
                         <Font size="20.0" />
                      </font>
