@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import net.sharkhedwigapp.Main;
-import net.sharkhedwigapp.Model.ShippingLabel;
+import net.sharkhedwigapp.Bean.ShippingLabel;
 import net.sharkhedwigapp.Model.Writer;
 
 public class  LabelController {

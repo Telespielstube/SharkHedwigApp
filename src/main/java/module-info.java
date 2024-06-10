@@ -13,4 +13,6 @@ module net.sharkhedwigapp.sharkhedwigapp {
     opens net.sharkhedwigapp.Controller to javafx.fxml;
     exports net.sharkhedwigapp.Model;
     opens net.sharkhedwigapp.Model to javafx.fxml;
+    exports net.sharkhedwigapp.Bean;
+    opens net.sharkhedwigapp.Bean to javafx.fxml;
 }
