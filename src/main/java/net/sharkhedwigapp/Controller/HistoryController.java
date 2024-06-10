@@ -4,23 +4,22 @@ import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 import net.sharkhedwigapp.Main;
 
-public class SettingsController {
+public class HistoryController {
     private Main main = new Main();
 
     @FXML
     protected void onShippingLabelButtonClick() {
-        this.main.changeScene("label-view.fxml");
+        main.changeScene("label-view.fxml");
     }
 
     @FXML
     protected void onHistoryButtonClick() {
-        this.main.changeScene("history-view.fxml");
+        main.changeScene("history-view.fxml");
     }
 
     @FXML
     protected void onSettingsButtonClick() {
-        this.main.changeScene("settings-view.fxml");
-
+        main.changeScene("settings-view.fxml");
     }
 
     @FXML

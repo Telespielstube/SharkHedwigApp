@@ -3,16 +3,11 @@ package net.sharkhedwigapp.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-//import net.sharkhedwigapp.BluetoothClient;
-import net.sharkhedwigapp.Connection.HttpClient;
 import net.sharkhedwigapp.Main;
-
-import java.util.Objects;
-import java.util.stream.Stream;
+import net.sharkhedwigapp.Model.ShippingLabel;
+import net.sharkhedwigapp.Model.Writer;
 
 public class  LabelController {
-    @FXML
-    private Text content_header;
     @FXML
     private Text send_info;
     @FXML
@@ -35,23 +30,34 @@ public class  LabelController {
     private TextField weight_field;
     @FXML
     private Text error_text;
+    private Main main = new Main();
 
     @FXML
     protected void onShippingLabelButtonClick() {
-        Main main = new Main();
-        content_header.setText("Shipping Label");
-        main.changeScene("label-view.fxml");
+        this.main.changeScene("label-view.fxml");
+    }
+
+    @FXML
+    protected void onHistoryButtonClick() {
+        this.main.changeScene("history-view.fxml");
     }
 
     @FXML
     protected void onSettingsButtonClick() {
-        content_header.setText("Settings");
+        this.main.changeScene("settings-view.fxml");
+    }
+
+    @FXML
+    protected void onExitButtonClick() {
+        System.exit(0);
     }
 
     @FXML
     protected void onSaveButtonClick() {
         if (verifyData()) {
-
+            Writer.writeData(new ShippingLabel(sender_field.getText(), origin_field.getText(), latitudeOrigin_field.getText(),
+                    longitudeOrigin_field.getText(), recipient_field.getText(), destination_field.getText(),
+                    latitudeDest_field.getText(), longitudeDest_field.getText(), weight_field.getText()));
         } else {
             error_text.setText("Some data is wrong. Check again!!");
         }
@@ -60,7 +66,7 @@ public class  LabelController {
     @FXML
     protected void onButtonClickSend() {
         if (verifyData()) {
-         //   new HttpClient().run();
+
             send_info.setText("Sent!!");
         } else {
             error_text.setText("Some data is wrong. Check again!!");
