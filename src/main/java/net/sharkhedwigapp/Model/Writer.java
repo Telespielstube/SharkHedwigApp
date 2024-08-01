@@ -36,4 +36,7 @@ public class Writer {
         }
         return true;
     }
+
+    public static void writeData(ShippingLabel shippingLabel) {
+    }
 }
